@@ -1,0 +1,301 @@
+/* ==========================================
+   WORKOUT CALENDAR
+========================================== */
+
+.planner-calendar-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.planner-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.planner-calendar-header h2 {
+    color: #172b4d;
+    margin-bottom: 6px;
+}
+
+.planner-calendar-header p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.planner-calendar-navigation {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.planner-calendar-navigation h3 {
+    min-width: 145px;
+    text-align: center;
+    color: #263b5e;
+    font-size: 17px;
+}
+
+.planner-calendar-navigation button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 9px;
+    background: #edf2ff;
+    color: #3157c8;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.planner-calendar-navigation button:hover {
+    background: #3157c8;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CALENDAR GRID
+========================================== */
+
+.planner-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.planner-calendar-weekday {
+    padding: 12px 4px;
+    text-align: center;
+    color: #718096;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.planner-calendar-day,
+.planner-calendar-empty {
+    min-height: 85px;
+    border-radius: 10px;
+}
+
+.planner-calendar-day {
+    border: 1px solid #edf0f5;
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.planner-calendar-day:hover {
+    border-color: #3157c8;
+    background: #f5f7ff;
+}
+
+.planner-calendar-day-number {
+    color: #263b5e;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.planner-calendar-day.today {
+    border: 2px solid #16a36a;
+}
+
+.planner-calendar-day.selected {
+    background: #3157c8;
+    border-color: #3157c8;
+}
+
+.planner-calendar-day.selected .planner-calendar-day-number {
+    color: #ffffff;
+}
+
+.planner-calendar-count {
+    font-size: 11px;
+    font-weight: 600;
+    color: #3157c8;
+    background: #e9efff;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.planner-calendar-day.selected .planner-calendar-count {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==========================================
+   CALENDAR LEGEND
+========================================== */
+
+.planner-calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.planner-calendar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #718096;
+    font-size: 12px;
+}
+
+.planner-calendar-legend i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legend-today {
+    background: #16a36a;
+}
+
+.legend-planned {
+    background: #3157c8;
+}
+
+.legend-selected {
+    background: #8b5cf6;
+}
+
+
+/* ==========================================
+   SELECTED DATE WORKOUTS
+========================================== */
+
+.planner-selected-date {
+    margin-top: 22px;
+}
+
+.planner-selected-date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.planner-selected-date-header h3 {
+    color: #263b5e;
+    font-size: 16px;
+}
+
+.planner-selected-date-header span {
+    color: #3157c8;
+    background: #edf2ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.planner-calendar-no-plans {
+    background: #f7f9fc;
+    color: #718096;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.planner-calendar-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.planner-calendar-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f7f9fc;
+    border: 1px solid #edf0f5;
+    border-radius: 10px;
+}
+
+.planner-calendar-plan h4 {
+    color: #263b5e;
+    margin-bottom: 5px;
+}
+
+.planner-calendar-plan p {
+    color: #718096;
+    font-size: 13px;
+}
+
+.planner-calendar-plan button {
+    border: none;
+    background: #3157c8;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.planner-calendar-plan button:hover {
+    background: #2445a8;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 650px) {
+
+    .planner-calendar-card {
+        padding: 16px;
+    }
+
+    .planner-calendar-grid {
+        gap: 4px;
+    }
+
+    .planner-calendar-day,
+    .planner-calendar-empty {
+        min-height: 65px;
+    }
+
+    .planner-calendar-day {
+        padding: 6px;
+    }
+
+    .planner-calendar-day-number {
+        font-size: 12px;
+    }
+
+    .planner-calendar-count {
+        font-size: 9px;
+        padding: 3px;
+    }
+
+    .planner-calendar-weekday {
+        font-size: 10px;
+    }
+
+    .planner-calendar-plan {
+        align-items: flex-start;
+    }
+
+}
