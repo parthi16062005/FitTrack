@@ -1,0 +1,568 @@
+/* ==========================================
+   EXERCISE LIBRARY - MAIN PAGE
+========================================== */
+
+.exercise-library-page {
+    padding: 30px;
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.exercise-eyebrow {
+    color: #6366f1;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.exercise-header h1 {
+    font-size: 30px;
+    margin: 8px 0;
+    font-weight: 750;
+}
+
+.exercise-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.exercise-total {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 18px 28px;
+    border-radius: 14px;
+    min-width: 145px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.exercise-total span {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.exercise-total strong {
+    font-size: 28px;
+}
+
+
+/* ==========================================
+   SECTION CARDS
+========================================== */
+
+.exercise-form-card,
+.exercise-filter-card,
+.exercise-list-section {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.exercise-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.exercise-section-heading h2 {
+    font-size: 19px;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.exercise-section-heading p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.exercise-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.exercise-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.exercise-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.exercise-field label {
+    font-size: 13px;
+    font-weight: 650;
+    color: #334155;
+}
+
+.exercise-field input,
+.exercise-field select,
+.exercise-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background: #fbfcfe;
+    color: #1e293b;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.exercise-field input:focus,
+.exercise-field select:focus,
+.exercise-field textarea:focus {
+    border-color: #6366f1;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.exercise-field textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+
+/* ==========================================
+   FORM BUTTONS
+========================================== */
+
+.exercise-form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.exercise-submit-btn,
+.exercise-cancel-btn,
+.exercise-clear-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.exercise-submit-btn {
+    background: #4f46e5;
+    color: white;
+}
+
+.exercise-submit-btn:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.exercise-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.exercise-cancel-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.exercise-cancel-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* ==========================================
+   ALERT MESSAGES
+========================================== */
+
+.exercise-alert {
+    padding: 13px 16px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.error-alert {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.success-alert {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+
+/* ==========================================
+   SEARCH AND FILTERS
+========================================== */
+
+.exercise-filter-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+    gap: 12px;
+}
+
+.exercise-filter-grid input,
+.exercise-filter-grid select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background: #fbfcfe;
+    color: #334155;
+    font-size: 12px;
+    outline: none;
+}
+
+.exercise-filter-grid input:focus,
+.exercise-filter-grid select:focus {
+    border-color: #6366f1;
+}
+
+.exercise-clear-btn {
+    background: #eef2ff;
+    color: #4f46e5;
+    white-space: nowrap;
+}
+
+.exercise-clear-btn:hover {
+    background: #e0e7ff;
+}
+
+
+/* ==========================================
+   EXERCISE GRID
+========================================== */
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.exercise-card {
+    background: white;
+    border: 1px solid #e5eaf2;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.25s ease;
+    min-width: 0;
+}
+
+.exercise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+    border-color: #c7d2fe;
+}
+
+
+/* ==========================================
+   EXERCISE IMAGE
+========================================== */
+
+.exercise-image {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+    background: #eef2ff;
+}
+
+.exercise-image-placeholder {
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: 750;
+    color: #4f46e5;
+    background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+}
+
+
+/* ==========================================
+   EXERCISE CARD CONTENT
+========================================== */
+
+.exercise-card-content {
+    padding: 18px;
+}
+
+.exercise-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 13px;
+}
+
+.exercise-category {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.difficulty-badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.difficulty-badge.beginner {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.difficulty-badge.intermediate {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.difficulty-badge.advanced {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.exercise-card-content h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
+    color: #1e293b;
+}
+
+.exercise-description {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+    min-height: 38px;
+    margin-bottom: 17px;
+}
+
+
+/* ==========================================
+   EXERCISE DETAILS
+========================================== */
+
+.exercise-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 13px 0;
+    border-top: 1px solid #eef2f7;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.exercise-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.exercise-details span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.exercise-details strong {
+    color: #334155;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   INSTRUCTIONS
+========================================== */
+
+.exercise-instructions {
+    margin-top: 15px;
+}
+
+.exercise-instructions strong {
+    font-size: 12px;
+    color: #334155;
+}
+
+.exercise-instructions p {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-top: 7px;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   CARD ACTION BUTTONS
+========================================== */
+
+.exercise-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.exercise-edit-btn,
+.exercise-delete-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.exercise-edit-btn {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.exercise-edit-btn:hover {
+    background: #e0e7ff;
+}
+
+.exercise-delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.exercise-delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* ==========================================
+   EMPTY / LOADING STATE
+========================================== */
+
+.exercise-empty {
+    text-align: center;
+    padding: 55px 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+.exercise-empty h3 {
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.exercise-empty p {
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .exercise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .exercise-filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .exercise-library-page {
+        padding: 18px;
+    }
+
+    .exercise-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .exercise-total {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .exercise-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-field.full-width {
+        grid-column: auto;
+    }
+
+    .exercise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-form-card,
+    .exercise-filter-card,
+    .exercise-list-section {
+        padding: 18px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .exercise-header h1 {
+        font-size: 24px;
+    }
+
+    .exercise-form-actions {
+        flex-direction: column;
+    }
+
+    .exercise-submit-btn,
+    .exercise-cancel-btn {
+        width: 100%;
+    }
+
+}

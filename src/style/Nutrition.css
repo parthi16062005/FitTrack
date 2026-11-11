@@ -1,0 +1,299 @@
+/* ==========================================
+   MODULE 13 - NUTRITION & MEAL TRACKING
+========================================== */
+
+.nutrition-page {
+    padding: 30px;
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+.nutrition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.nutrition-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.nutrition-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.nutrition-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.nutrition-card {
+    padding: 24px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #2563eb;
+    transition: transform 0.2s ease;
+}
+
+.nutrition-card:hover {
+    transform: translateY(-4px);
+}
+
+.nutrition-card h3 {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.nutrition-card h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.nutrition-card p {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.calories-card {
+    border-left-color: #f97316;
+}
+
+.protein-card {
+    border-left-color: #2563eb;
+}
+
+.carbs-card {
+    border-left-color: #16a34a;
+}
+
+.fats-card {
+    border-left-color: #9333ea;
+}
+
+
+/* ==========================================
+   FORM SECTION
+========================================== */
+
+.nutrition-form-section,
+.nutrition-meals-section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nutrition-form-section h2,
+.nutrition-meals-section h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.nutrition-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.nutrition-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nutrition-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.nutrition-field input,
+.nutrition-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe1ea;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #1e293b;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.nutrition-field input:focus,
+.nutrition-field select:focus {
+    border-color: #2563eb;
+}
+
+.nutrition-add-button {
+    margin-top: 22px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nutrition-add-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   MEAL TABLE
+========================================== */
+
+.nutrition-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.nutrition-table th {
+    padding: 15px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nutrition-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+.nutrition-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.meal-type-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.nutrition-delete-button {
+    padding: 7px 13px;
+    border: none;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nutrition-delete-button:hover {
+    background: #fecaca;
+}
+
+
+/* ==========================================
+   MESSAGES
+========================================== */
+
+.nutrition-loading {
+    padding: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #64748b;
+}
+
+.nutrition-empty {
+    padding: 35px;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 10px;
+    color: #64748b;
+}
+
+.nutrition-error,
+.nutrition-success {
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.nutrition-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.nutrition-success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .nutrition-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nutrition-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nutrition-page {
+        padding: 18px;
+    }
+
+    .nutrition-header h1 {
+        font-size: 22px;
+    }
+
+    .nutrition-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-form-section,
+    .nutrition-meals-section {
+        padding: 18px;
+    }
+
+}

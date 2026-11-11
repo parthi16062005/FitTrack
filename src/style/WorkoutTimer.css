@@ -1,0 +1,339 @@
+/* ==========================================
+   MODULE 16 - WORKOUT TIMER
+========================================== */
+
+.timer-page {
+    padding: 30px;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.timer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.timer-header h1 {
+    font-size: 30px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.timer-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* ==========================================
+   TIMER CARD
+========================================== */
+
+.timer-card {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #122d83, #8a397a);
+    color: white;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.2);
+}
+
+.timer-status {
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-badge.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-badge.paused {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-badge.inactive {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.timer-display {
+    font-size: clamp(48px, 9vw, 76px);
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin: 25px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-caption {
+    font-size: 18px;
+    color: #dbeafe;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   TIMER FORM
+========================================== */
+
+.timer-form {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.timer-field {
+    margin-bottom: 20px;
+}
+
+.timer-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.timer-field input,
+.timer-field select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+    color: #1e293b;
+}
+
+.timer-field input:focus,
+.timer-field select:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.timer-start-btn,
+.timer-pause-btn,
+.timer-resume-btn,
+.timer-stop-btn {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.timer-start-btn {
+    width: 100%;
+    background: #22c55e;
+    color: white;
+}
+
+.timer-start-btn:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.timer-pause-btn {
+    background: #facc15;
+    color: #713f12;
+}
+
+.timer-resume-btn {
+    background: #22c55e;
+    color: white;
+}
+
+.timer-stop-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.timer-pause-btn:hover,
+.timer-resume-btn:hover,
+.timer-stop-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+}
+
+/* ==========================================
+   WORKOUT INFORMATION
+========================================== */
+
+.timer-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+}
+
+.timer-info-card {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.timer-info-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.timer-info-card strong {
+    color: #878a97;
+    font-size: 18px;
+}
+
+/* ==========================================
+   WORKOUT HISTORY
+========================================== */
+
+.timer-history {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.timer-history h2 {
+    font-size: 21px;
+    margin-bottom: 22px;
+}
+
+.timer-history-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.timer-history table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.timer-history th,
+.timer-history td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.timer-history th {
+    background: #eff6ff;
+    color: #b1b5c2;
+    font-size: 13px;
+}
+
+.timer-history td {
+    font-size: 14px;
+    color: #475569;
+}
+
+.history-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.timer-empty {
+    text-align: center;
+    padding: 35px;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+/* ==========================================
+   ALERTS
+========================================== */
+
+.timer-error,
+.timer-success {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.timer-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.timer-success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.timer-loading {
+    padding: 60px;
+    text-align: center;
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    .timer-page {
+        padding: 18px;
+    }
+
+    .timer-card {
+        padding: 25px 18px;
+    }
+
+    .timer-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-history {
+        padding: 18px;
+    }
+
+    .timer-controls {
+        flex-direction: column;
+    }
+
+    .timer-controls button {
+        width: 100%;
+    }
+
+}

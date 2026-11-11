@@ -1,0 +1,224 @@
+/* ==========================================
+   WORKOUT STREAK PAGE
+========================================== */
+
+.streak-page {
+    padding: 30px;
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+.streak-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.streak-header h1 {
+    font-size: 30px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.streak-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.streak-refresh {
+    padding: 11px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.streak-refresh:hover {
+    background: #1d4ed8;
+}
+
+/* HERO */
+
+.streak-hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #ff7a18, #ffb347);
+    color: white;
+    box-shadow: 0 10px 25px rgba(255, 122, 24, 0.18);
+}
+
+.streak-flame {
+    font-size: 65px;
+}
+
+.streak-hero span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.streak-hero h2 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.streak-hero p {
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+/* STATISTICS */
+
+.streak-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.streak-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8edf4;
+}
+
+.streak-card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 14px;
+    background: #fff7ed;
+}
+
+.streak-card h3 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.streak-card strong {
+    font-size: 30px;
+    margin-right: 7px;
+    color: #1e293b;
+}
+
+.streak-card span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.streak-card.purple .streak-card-icon {
+    background: #f3e8ff;
+}
+
+.streak-card.blue .streak-card-icon {
+    background: #dbeafe;
+}
+
+/* DETAILS */
+
+.streak-details {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.streak-details h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.streak-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.streak-detail-row:last-child {
+    border-bottom: none;
+}
+
+.streak-detail-row span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.streak-detail-row strong {
+    color: #1e293b;
+    font-size: 14px;
+}
+
+/* LOADING AND ERROR */
+
+.streak-message,
+.streak-error {
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.streak-error {
+    color: #dc2626;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .streak-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .streak-page {
+        padding: 18px;
+    }
+
+    .streak-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .streak-header h1 {
+        font-size: 24px;
+    }
+
+    .streak-hero {
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .streak-flame {
+        font-size: 45px;
+    }
+
+    .streak-hero h2 {
+        font-size: 32px;
+    }
+
+    .streak-detail-row {
+        gap: 12px;
+    }
+}
